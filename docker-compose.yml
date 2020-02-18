@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web-with-redis:
+    build: ./simple_redis_server_ping
+    ports:
+    - "1323:1323"
+    links:
+    - redis
+  web:
+    build: ./
+    ports:
+    - "1323:1323"
+  redis:
+    build: ./redis-server
