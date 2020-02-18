@@ -7,7 +7,7 @@ services:
     links:
     - redis
   web:
-    build: ./
+    build: ./simple_server
     ports:
     - "1323:1323"
   redis:
